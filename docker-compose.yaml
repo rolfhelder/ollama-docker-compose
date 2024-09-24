@@ -9,6 +9,7 @@ services:
     healthcheck:
       test: ollama ps || exit 1
       interval: 10s
+    restart: unless-stopped
     ports:
       - "11434:11434"
     volumes:
