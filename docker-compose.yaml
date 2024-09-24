@@ -13,3 +13,5 @@ services:
       - "11434:11434"
     volumes:
       - ./ollama:/root/.ollama
+      environment:
+      - OLLAMA_KEEP_ALIVE=5m
