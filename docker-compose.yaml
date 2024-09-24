@@ -7,7 +7,7 @@ services:
     image: ollama/ollama
     pull_policy: always
     healthcheck:
-      test: ollama --version || exit 1
+      test: ollama ps || exit 1
       interval: 10s
     ports:
       - "11434:11434"
