@@ -15,6 +15,7 @@ services:
     volumes:
       - ./ollama:/root/.ollama
       environment:
+      # - OLLAMA_HOST='0.0.0.0'  # uncomment to make ollama reachable by other computers on your network
       - OLLAMA_KEEP_ALIVE=5m
       - OLLAMA_FLASH_ATTENTION=0  # 1 is experimental as of 0.3.11
     # If Ollama is not using the GPU, try  uncommenting those lines
