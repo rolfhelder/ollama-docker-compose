@@ -17,3 +17,11 @@ services:
       environment:
       - OLLAMA_KEEP_ALIVE=5m
       - OLLAMA_FLASH_ATTENTION=0  # 1 is experimental as of 0.3.11
+    # If Ollama is not using the GPU, try  uncommenting those lines
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
