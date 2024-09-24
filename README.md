@@ -35,11 +35,11 @@ docker-compose pull
 docker-compose up --wait --detach
 ```
 
-Here's how to execute `ollama run llama2` commands within the container:
+Here's how to execute `ollama run llama3` commands within the container:
 
 ```bash
 container_id=$(docker ps | grep ollama | awk '{print $1}')
-docker exec -it $container_id ollama run llama2
+docker exec -it $container_id ollama run llama3
 ```
 
 Or here is how to open a bash shell in the container:
