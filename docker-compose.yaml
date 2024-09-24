@@ -5,6 +5,7 @@ services:
     build: .
     container_name: ollama
     image: ollama/ollama
+    pull_policy: always
     healthcheck:
       test: ollama --version || exit 1
       interval: 10s
